@@ -6,7 +6,7 @@
 /*   By: smatthes <smatthes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 09:52:03 by smatthes          #+#    #+#             */
-/*   Updated: 2023/05/11 19:54:33 by smatthes         ###   ########.fr       */
+/*   Updated: 2023/05/12 10:12:00 by smatthes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		*res = '-';
 	res[length--] = '\0';
-	while (n_l / 10 > 0)
+	while (n_l >= 10)
 	{
 		res[length--] = (n_l % 10) + '0';
 		n_l = n_l / 10;
@@ -63,7 +63,7 @@ static size_t	get_num_digs(long n_l)
 	res = n_l;
 	if (n_l < 0)
 		res *= -1;
-	while (res / 10 > 0)
+	while (res >= 10)
 	{
 		length++;
 		res = res / 10;
