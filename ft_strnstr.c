@@ -6,7 +6,7 @@
 /*   By: smatthes <smatthes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 09:52:02 by smatthes          #+#    #+#             */
-/*   Updated: 2023/05/11 15:16:19 by smatthes         ###   ########.fr       */
+/*   Updated: 2023/05/14 16:52:26 by smatthes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t i;
-	size_t j;
-	char *cmp_start;
+	size_t	i;
+	size_t	j;
+	char	*cmp_start;
 
 	i = 0;
 	if (!*little)

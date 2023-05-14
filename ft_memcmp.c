@@ -6,7 +6,7 @@
 /*   By: smatthes <smatthes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 09:52:02 by smatthes          #+#    #+#             */
-/*   Updated: 2023/05/12 11:56:46 by smatthes         ###   ########.fr       */
+/*   Updated: 2023/05/14 16:50:33 by smatthes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char *s1_u;
-	unsigned char *s2_u;
-	size_t i;
+	unsigned char	*s1_u;
+	unsigned char	*s2_u;
+	size_t			i;
 
 	if (n == 0)
 		return (0);

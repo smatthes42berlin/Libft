@@ -6,7 +6,7 @@
 /*   By: smatthes <smatthes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 09:52:02 by smatthes          #+#    #+#             */
-/*   Updated: 2023/05/12 15:39:22 by smatthes         ###   ########.fr       */
+/*   Updated: 2023/05/14 16:55:21 by smatthes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (s_u[i] == c_u)
-			return (void *)(s_u + i);
+			return ((void *)(s_u + i));
 		i++;
 	}
 	return (NULL);
