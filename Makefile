@@ -6,7 +6,7 @@
 #    By: smatthes <smatthes@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/10 14:58:39 by smatthes          #+#    #+#              #
-#    Updated: 2023/05/24 19:07:04 by smatthes         ###   ########.fr        #
+#    Updated: 2023/05/24 19:39:47 by smatthes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ SRCBONUS =	ft_lstadd_back.c ft_lstclear.c \
 ft_lstiter.c ft_lstmap.c \
 ft_lstsize.c ft_lstadd_front.c \
 ft_lstdelone.c ft_lstlast.c \
-ft_lst_new.c
+ft_lstnew.c
 
 OBJSCORE = $(SRCCORE:.c=.o)
 OBJBONUS = $(SRCBONUS:.c=.o)
