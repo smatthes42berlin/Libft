@@ -6,7 +6,7 @@
 #    By: smatthes <smatthes@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/10 14:58:39 by smatthes          #+#    #+#              #
-#    Updated: 2023/05/10 17:34:48 by smatthes         ###   ########.fr        #
+#    Updated: 2023/05/21 17:30:41 by smatthes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,12 +32,17 @@ ft_isascii.c ft_memcpy.c ft_putstr_fd.c \
 ft_strjoin.c
 
 SRCBONUS =	ft_lstadd_back.c ft_lstclear.c \
-ft_lstiter. ft_lstmap.c \
-ft_lstsize ft_lstadd_front. \
-ft_lstdelone. ft_lstlast. \
-ft_lst_new.
+ft_lstiter.c ft_lstmap.c \
+ft_lstsize.c ft_lstadd_front.c \
+ft_lstdelone.c ft_lstlast.c \
+ft_lst_new.c
 
-OBJS = $(SRCCORE:.c=.o)
+ALLFILES = $(SRCCORE) $(SRCBONUS)
+
+# OBJS = $(SRCCORE:.c=.o)
+OBJS = $(ALLFILES:.c=.o)
+
+filename: ;echo $(ALLFILES)
 
 .PHONY: all clean fclean re main
 
