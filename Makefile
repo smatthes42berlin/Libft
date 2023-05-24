@@ -6,7 +6,7 @@
 #    By: smatthes <smatthes@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/10 14:58:39 by smatthes          #+#    #+#              #
-#    Updated: 2023/05/21 17:30:41 by smatthes         ###   ########.fr        #
+#    Updated: 2023/05/24 19:07:04 by smatthes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,30 +37,26 @@ ft_lstsize.c ft_lstadd_front.c \
 ft_lstdelone.c ft_lstlast.c \
 ft_lst_new.c
 
-ALLFILES = $(SRCCORE) $(SRCBONUS)
+OBJSCORE = $(SRCCORE:.c=.o)
+OBJBONUS = $(SRCBONUS:.c=.o)
 
-# OBJS = $(SRCCORE:.c=.o)
-OBJS = $(ALLFILES:.c=.o)
-
-filename: ;echo $(ALLFILES)
-
-.PHONY: all clean fclean re main
+.PHONY: all clean fclean re bonus
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJSCORE)
+	ar rcs $(NAME) $^
+
+bonus: $(OBJSCORE) $(OBJBONUS)
 	ar rcs $(NAME) $^
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJSCORE) $(OBJBONUS)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-
-main: $(NAME)
-	cc -o exe main.c -L. $(NAME)
